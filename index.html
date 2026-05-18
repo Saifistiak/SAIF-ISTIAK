@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +43,7 @@
             colors: {
               brand: {
                 night: "#0b1020",
+                deep: "#0b132b",
                 ink: "#0f172a",
                 sky: "#38bdf8",
                 mint: "#22c55e",
@@ -52,27 +53,28 @@
             },
             boxShadow: {
               soft: "0 20px 60px rgba(15, 23, 42, 0.25)",
+              glow: "0 0 30px rgba(56, 189, 248, 0.35)",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-brand-night text-slate-100 font-prompt">
+  <body class="bg-gradient-to-b from-brand-night via-brand-deep to-brand-night text-slate-100 font-prompt">
     <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-brand-night/80 backdrop-blur border-b border-white/5">
+    <header class="sticky top-0 z-50 bg-brand-night/75 backdrop-blur border-b border-white/5">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div class="font-semibold text-xl tracking-wide">Saif Istiak</div>
         <nav class="hidden md:flex gap-6 text-sm text-slate-200">
-          <a href="#about" class="hover:text-brand-sky">About</a>
-          <a href="#skills" class="hover:text-brand-sky">Skills</a>
-          <a href="#services" class="hover:text-brand-sky">Services</a>
-          <a href="#stack" class="hover:text-brand-sky">Tech Stack</a>
-          <a href="#contact" class="hover:text-brand-sky">Contact</a>
+          <a href="#about" class="hover:text-brand-sky transition">About</a>
+          <a href="#skills" class="hover:text-brand-sky transition">Skills</a>
+          <a href="#services" class="hover:text-brand-sky transition">Services</a>
+          <a href="#stack" class="hover:text-brand-sky transition">Tech Stack</a>
+          <a href="#contact" class="hover:text-brand-sky transition">Contact</a>
         </nav>
         <a
           href="#contact"
-          class="hidden md:inline-flex items-center gap-2 bg-brand-sky text-brand-night px-4 py-2 rounded-full text-sm font-semibold"
+          class="hidden md:inline-flex items-center gap-2 bg-brand-sky text-brand-night px-5 py-2 rounded-full text-sm font-semibold shadow-glow hover:-translate-y-0.5 transition"
         >
           Start a Project
         </a>
@@ -99,13 +101,13 @@
           <div class="mt-7 flex flex-wrap gap-3">
             <a
               href="#services"
-              class="bg-brand-sky text-brand-night px-5 py-2.5 rounded-full font-semibold"
+              class="bg-brand-sky text-brand-night px-6 py-2.5 rounded-full font-semibold shadow-glow hover:-translate-y-0.5 transition"
             >
               View Services
             </a>
             <a
               href="#contact"
-              class="border border-white/10 px-5 py-2.5 rounded-full text-slate-100"
+              class="border border-white/10 px-6 py-2.5 rounded-full text-slate-100 hover:border-brand-sky/60 transition"
             >
               Contact Me
             </a>
@@ -321,17 +323,17 @@
         <form class="bg-white/5 p-6 rounded-2xl border border-white/10">
           <div class="mb-4">
             <label class="block text-sm mb-1">Name</label>
-            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" type="text" />
+            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white focus:ring-2 focus:ring-brand-sky/40 outline-none" type="text" />
           </div>
           <div class="mb-4">
             <label class="block text-sm mb-1">Email</label>
-            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" type="email" />
+            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white focus:ring-2 focus:ring-brand-sky/40 outline-none" type="email" />
           </div>
           <div class="mb-4">
             <label class="block text-sm mb-1">Message</label>
-            <textarea class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" rows="4"></textarea>
+            <textarea class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white focus:ring-2 focus:ring-brand-sky/40 outline-none" rows="4"></textarea>
           </div>
-          <button class="bg-brand-sky text-brand-night px-4 py-2 rounded-lg font-semibold">Send Message</button>
+          <button class="bg-brand-sky text-brand-night px-4 py-2 rounded-lg font-semibold shadow-glow hover:-translate-y-0.5 transition">Send Message</button>
         </form>
         <div class="space-y-3">
           <a href="https://github.com/saifistiak" class="flex items-center gap-3 px-4 py-2 border border-white/10 rounded-lg bg-white/5 hover:bg-white/10 transition">
@@ -358,7 +360,7 @@
             <i class="fa-brands fa-instagram text-brand-sun"></i>
             <span>Instagram</span>
           </a>
-          <a href="https://x.com/@mdsaifistiak" class="flex items-center gap-3 px-4 py-2 border border-white/10 rounded-lg bg-white/5 hover:bg-white/10 transition">
+          <a href="https://x.com/mdsaifistiak" class="flex items-center gap-3 px-4 py-2 border border-white/10 rounded-lg bg-white/5 hover:bg-white/10 transition">
             <i class="fa-brands fa-x-twitter text-brand-sky"></i>
             <span>X (Twitter)</span>
           </a>
