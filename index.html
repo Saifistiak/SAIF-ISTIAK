@@ -42,31 +42,37 @@
             },
             colors: {
               brand: {
+                night: "#0b1020",
                 ink: "#0f172a",
-                blue: "#0b56e0",
-                soft: "#fff7f0",
+                sky: "#38bdf8",
+                mint: "#22c55e",
+                sun: "#f59e0b",
+                glow: "#0ea5e9",
               },
+            },
+            boxShadow: {
+              soft: "0 20px 60px rgba(15, 23, 42, 0.25)",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-white text-slate-900 font-prompt">
+  <body class="bg-brand-night text-slate-100 font-prompt">
     <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-brand-night/80 backdrop-blur border-b border-white/5">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="font-semibold text-xl">Saif Istiak</div>
-        <nav class="hidden md:flex gap-6 text-sm">
-          <a href="#about" class="hover:text-brand-blue">About</a>
-          <a href="#skills" class="hover:text-brand-blue">Skills</a>
-          <a href="#services" class="hover:text-brand-blue">Services</a>
-          <a href="#stack" class="hover:text-brand-blue">Tech Stack</a>
-          <a href="#contact" class="hover:text-brand-blue">Contact</a>
+        <div class="font-semibold text-xl tracking-wide">Saif Istiak</div>
+        <nav class="hidden md:flex gap-6 text-sm text-slate-200">
+          <a href="#about" class="hover:text-brand-sky">About</a>
+          <a href="#skills" class="hover:text-brand-sky">Skills</a>
+          <a href="#services" class="hover:text-brand-sky">Services</a>
+          <a href="#stack" class="hover:text-brand-sky">Tech Stack</a>
+          <a href="#contact" class="hover:text-brand-sky">Contact</a>
         </nav>
         <a
           href="#contact"
-          class="hidden md:inline-flex items-center gap-2 bg-brand-blue text-white px-4 py-2 rounded-lg text-sm"
+          class="hidden md:inline-flex items-center gap-2 bg-brand-sky text-brand-night px-4 py-2 rounded-full text-sm font-semibold"
         >
           Start a Project
         </a>
@@ -74,40 +80,82 @@
     </header>
 
     <!-- Hero -->
-    <section class="bg-brand-soft">
-      <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <section class="relative overflow-hidden">
+      <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-brand-sky/20 blur-3xl"></div>
+      <div class="absolute top-40 -left-32 h-80 w-80 rounded-full bg-brand-mint/20 blur-3xl"></div>
+      <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-brand-blue font-semibold">Full Stack Web Developer & Gamer</p>
-          <h1 class="text-4xl md:text-5xl font-semibold leading-tight mt-3">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-sky">
+            <span class="h-2 w-2 bg-brand-sky rounded-full"></span>
+            Full Stack Web Developer & Gamer
+          </div>
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight mt-4">
             Building Modern, Secure & Scalable Web Experiences
           </h1>
-          <p class="mt-4 text-slate-700">
+          <p class="mt-5 text-slate-300">
             I build fast, secure, and modern websites with frontend, backend, cloud
-            optimization, and SEO.
+            optimization, and SEO — engineered for performance and growth.
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
+          <div class="mt-7 flex flex-wrap gap-3">
             <a
               href="#services"
-              class="bg-brand-blue text-white px-5 py-2.5 rounded-lg"
+              class="bg-brand-sky text-brand-night px-5 py-2.5 rounded-full font-semibold"
             >
               View Services
             </a>
             <a
               href="#contact"
-              class="border border-slate-200 px-5 py-2.5 rounded-lg"
+              class="border border-white/10 px-5 py-2.5 rounded-full text-slate-100"
             >
               Contact Me
             </a>
           </div>
+          <div class="mt-8 grid grid-cols-2 gap-4 text-sm">
+            <div class="bg-white/5 border border-white/10 rounded-2xl px-4 py-3">
+              <p class="text-slate-400">Experience</p>
+              <p class="text-lg font-semibold">3+ Years</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl px-4 py-3">
+              <p class="text-slate-400">Focus</p>
+              <p class="text-lg font-semibold">Performance & Security</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-white shadow-lg rounded-2xl p-6">
-          <h3 class="text-lg font-semibold">Quick Highlights</h3>
-          <ul class="mt-4 space-y-3 text-slate-700">
-            <li><i class="fa-solid fa-check text-brand-blue"></i> Full Stack Development</li>
-            <li><i class="fa-solid fa-check text-brand-blue"></i> Cloudflare Security</li>
-            <li><i class="fa-solid fa-check text-brand-blue"></i> SEO Optimization</li>
-            <li><i class="fa-solid fa-check text-brand-blue"></i> Performance Focus</li>
-          </ul>
+        <div class="relative">
+          <div class="absolute -inset-6 bg-gradient-to-br from-brand-sky/30 to-brand-mint/30 blur-2xl rounded-3xl"></div>
+          <div class="relative bg-white/5 border border-white/10 rounded-3xl p-6 shadow-soft">
+            <div class="flex items-center gap-4">
+              <div class="h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-sky to-brand-mint p-1">
+                <img
+                  src="assets/saif-profile.png"
+                  alt="Saif Istiak"
+                  class="h-full w-full rounded-2xl object-cover bg-brand-night"
+                />
+              </div>
+              <div>
+                <p class="text-lg font-semibold">Saif Istiak</p>
+                <p class="text-sm text-slate-300">Full Stack Web Developer & Gamer</p>
+              </div>
+            </div>
+            <div class="mt-6 space-y-3 text-slate-200">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-bolt text-brand-sky"></i>
+                <span>Full Stack Development</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-brand-mint"></i>
+                <span>Cloudflare Security</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-magnifying-glass-chart text-brand-sun"></i>
+                <span>SEO Optimization</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-gauge-high text-brand-sky"></i>
+                <span>Performance Focus</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -115,65 +163,65 @@
     <!-- About -->
     <section id="about" class="max-w-6xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-semibold">About Me</h2>
-      <p class="mt-4 text-slate-700">
+      <p class="mt-4 text-slate-300">
         I am a passionate Full Stack Web Developer with experience in frontend, backend,
         cloud optimization, and SEO. I build fast, secure, and modern websites using
         latest technologies. I also enjoy playing Minecraft and Roblox, which inspires
         my creative UI designs.
       </p>
       <div class="mt-8 grid md:grid-cols-4 gap-4">
-        <div class="p-4 bg-white rounded-xl border">
-          <p class="text-sm text-slate-500">Experience</p>
-          <p class="text-2xl font-semibold">3+ Years</p>
+        <div class="p-5 bg-white/5 rounded-2xl border border-white/10">
+          <p class="text-sm text-slate-400">Professional Summary</p>
+          <p class="text-lg font-semibold">Modern, Secure Web Builder</p>
         </div>
-        <div class="p-4 bg-white rounded-xl border">
-          <p class="text-sm text-slate-500">Focus</p>
-          <p class="text-lg font-semibold">Full Stack Development</p>
+        <div class="p-5 bg-white/5 rounded-2xl border border-white/10">
+          <p class="text-sm text-slate-400">Experience</p>
+          <p class="text-lg font-semibold">3+ Years</p>
         </div>
-        <div class="p-4 bg-white rounded-xl border">
-          <p class="text-sm text-slate-500">Security</p>
-          <p class="text-lg font-semibold">Cloudflare Setup</p>
+        <div class="p-5 bg-white/5 rounded-2xl border border-white/10">
+          <p class="text-sm text-slate-400">Cloudflare</p>
+          <p class="text-lg font-semibold">Security & CDN</p>
         </div>
-        <div class="p-4 bg-white rounded-xl border">
-          <p class="text-sm text-slate-500">Optimization</p>
+        <div class="p-5 bg-white/5 rounded-2xl border border-white/10">
+          <p class="text-sm text-slate-400">Optimization</p>
           <p class="text-lg font-semibold">SEO & Performance</p>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="bg-slate-50">
+    <section id="skills" class="bg-white/5">
       <div class="max-w-6xl mx-auto px-6 py-16">
         <h2 class="text-3xl font-semibold">Skills</h2>
         <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold">Frontend</h3>
-            <ul class="mt-4 space-y-2 text-slate-700">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript (ES6+)</li>
-              <li>TailwindCSS</li>
-              <li>Font Awesome</li>
-              <li>Google Fonts</li>
-              <li>SEO Friendly Markup</li>
+          <div class="bg-brand-night/60 rounded-2xl p-6 border border-white/10">
+            <h3 class="font-semibold text-lg">Frontend</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li><i class="fa-solid fa-code text-brand-sky"></i> HTML5</li>
+              <li><i class="fa-solid fa-paintbrush text-brand-sky"></i> CSS3</li>
+              <li><i class="fa-brands fa-js text-brand-sky"></i> JavaScript (ES6+)</li>
+              <li><i class="fa-brands fa-css3-alt text-brand-sky"></i> TailwindCSS</li>
+              <li><i class="fa-solid fa-icons text-brand-sky"></i> Font Awesome</li>
+              <li><i class="fa-solid fa-font text-brand-sky"></i> Google Fonts</li>
+              <li><i class="fa-solid fa-magnifying-glass text-brand-sky"></i> SEO Friendly Markup</li>
             </ul>
           </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold">Backend</h3>
-            <ul class="mt-4 space-y-2 text-slate-700">
-              <li>PHP</li>
-              <li>Python</li>
-              <li>Laravel</li>
-              <li>Full Stack Development</li>
+          <div class="bg-brand-night/60 rounded-2xl p-6 border border-white/10">
+            <h3 class="font-semibold text-lg">Backend</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li><i class="fa-brands fa-php text-brand-mint"></i> PHP</li>
+              <li><i class="fa-brands fa-python text-brand-mint"></i> Python</li>
+              <li><i class="fa-brands fa-laravel text-brand-mint"></i> Laravel</li>
+              <li><i class="fa-solid fa-layer-group text-brand-mint"></i> Full Stack Development</li>
             </ul>
           </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold">Cloud & Tools</h3>
-            <ul class="mt-4 space-y-2 text-slate-700">
-              <li>Sketchware</li>
-              <li>Cloudflare (Security, CDN, Optimization)</li>
-              <li>Coordinator</li>
-              <li>Git & GitHub</li>
+          <div class="bg-brand-night/60 rounded-2xl p-6 border border-white/10">
+            <h3 class="font-semibold text-lg">Cloud & Tools</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li><i class="fa-solid fa-mobile-screen-button text-brand-sun"></i> Sketchware</li>
+              <li><i class="fa-solid fa-cloud text-brand-sun"></i> Cloudflare (Security, CDN, Optimization)</li>
+              <li><i class="fa-solid fa-diagram-project text-brand-sun"></i> Coordinator</li>
+              <li><i class="fa-brands fa-github text-brand-sun"></i> Git & GitHub</li>
             </ul>
           </div>
         </div>
@@ -184,31 +232,63 @@
     <section id="services" class="max-w-6xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-semibold">Services</h2>
       <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="p-5 border rounded-xl">Full Stack Web Development</div>
-        <div class="p-5 border rounded-xl">Frontend UI/UX Design</div>
-        <div class="p-5 border rounded-xl">Backend & API Development</div>
-        <div class="p-5 border rounded-xl">Laravel Web Applications</div>
-        <div class="p-5 border rounded-xl">Cloudflare Setup & Security</div>
-        <div class="p-5 border rounded-xl">SEO Optimization</div>
-        <div class="p-5 border rounded-xl">Automation Systems</div>
-        <div class="p-5 border rounded-xl">Gamer Style Websites</div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-layer-group text-brand-sky"></i>
+          <h3 class="mt-3 font-semibold">Full Stack Web Development</h3>
+          <p class="text-slate-300 text-sm mt-2">Secure, scalable, and fast web solutions.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-palette text-brand-sky"></i>
+          <h3 class="mt-3 font-semibold">Frontend UI/UX Design</h3>
+          <p class="text-slate-300 text-sm mt-2">Pixel-perfect, user-focused interfaces.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-server text-brand-mint"></i>
+          <h3 class="mt-3 font-semibold">Backend & API Development</h3>
+          <p class="text-slate-300 text-sm mt-2">Robust, secure APIs for your products.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-brands fa-laravel text-brand-mint"></i>
+          <h3 class="mt-3 font-semibold">Laravel Web Applications</h3>
+          <p class="text-slate-300 text-sm mt-2">High-performance Laravel builds.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-shield-halved text-brand-sun"></i>
+          <h3 class="mt-3 font-semibold">Cloudflare Setup & Security</h3>
+          <p class="text-slate-300 text-sm mt-2">Protection, CDN, and optimization.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-chart-line text-brand-sun"></i>
+          <h3 class="mt-3 font-semibold">SEO Optimization</h3>
+          <p class="text-slate-300 text-sm mt-2">Rank higher with technical SEO.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-robot text-brand-sky"></i>
+          <h3 class="mt-3 font-semibold">Automation Systems</h3>
+          <p class="text-slate-300 text-sm mt-2">Save time with smart workflows.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <i class="fa-solid fa-gamepad text-brand-mint"></i>
+          <h3 class="mt-3 font-semibold">Gamer Style Websites</h3>
+          <p class="text-slate-300 text-sm mt-2">Bold, creative layouts for gamers.</p>
+        </div>
       </div>
     </section>
 
     <!-- Tech Stack -->
-    <section id="stack" class="bg-slate-50">
+    <section id="stack" class="bg-white/5">
       <div class="max-w-6xl mx-auto px-6 py-16">
         <h2 class="text-3xl font-semibold">Tech Stack</h2>
         <div class="mt-8 grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-html5 text-2xl"></i><p>HTML</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-css3-alt text-2xl"></i><p>CSS</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-js text-2xl"></i><p>JavaScript</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-php text-2xl"></i><p>PHP</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-python text-2xl"></i><p>Python</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-laravel text-2xl"></i><p>Laravel</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-css3 text-2xl"></i><p>TailwindCSS</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-solid fa-cloud text-2xl"></i><p>Cloudflare</p></div>
-          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fa-brands fa-github text-2xl"></i><p>GitHub</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-html5 text-2xl text-brand-sky"></i><p class="mt-2">HTML</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-css3-alt text-2xl text-brand-sky"></i><p class="mt-2">CSS</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-js text-2xl text-brand-sky"></i><p class="mt-2">JavaScript</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-php text-2xl text-brand-mint"></i><p class="mt-2">PHP</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-python text-2xl text-brand-mint"></i><p class="mt-2">Python</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-laravel text-2xl text-brand-mint"></i><p class="mt-2">Laravel</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-css3 text-2xl text-brand-sky"></i><p class="mt-2">TailwindCSS</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-solid fa-cloud text-2xl text-brand-sun"></i><p class="mt-2">Cloudflare</p></div>
+          <div class="p-4 bg-brand-night/60 rounded-2xl border border-white/10"><i class="fa-brands fa-github text-2xl text-brand-sun"></i><p class="mt-2">GitHub</p></div>
         </div>
       </div>
     </section>
@@ -217,34 +297,34 @@
     <section id="contact" class="max-w-6xl mx-auto px-6 py-16">
       <h2 class="text-3xl font-semibold">Contact</h2>
       <div class="mt-8 grid md:grid-cols-2 gap-8">
-        <form class="bg-white p-6 rounded-xl shadow-sm">
+        <form class="bg-white/5 p-6 rounded-2xl border border-white/10">
           <div class="mb-4">
             <label class="block text-sm mb-1">Name</label>
-            <input class="w-full border rounded-lg px-3 py-2" type="text" />
+            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" type="text" />
           </div>
           <div class="mb-4">
             <label class="block text-sm mb-1">Email</label>
-            <input class="w-full border rounded-lg px-3 py-2" type="email" />
+            <input class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" type="email" />
           </div>
           <div class="mb-4">
             <label class="block text-sm mb-1">Message</label>
-            <textarea class="w-full border rounded-lg px-3 py-2" rows="4"></textarea>
+            <textarea class="w-full border border-white/10 rounded-lg px-3 py-2 bg-brand-night text-white" rows="4"></textarea>
           </div>
-          <button class="bg-brand-blue text-white px-4 py-2 rounded-lg">Send Message</button>
+          <button class="bg-brand-sky text-brand-night px-4 py-2 rounded-lg font-semibold">Send Message</button>
         </form>
         <div class="space-y-3">
-          <a href="https://github.com/saifistiak" class="block px-4 py-2 border rounded-lg">GitHub</a>
-          <a href="https://www.facebook.com/mdsaifistiak" class="block px-4 py-2 border rounded-lg">Facebook</a>
-          <a href="https://m.me/mdsaifistiak" class="block px-4 py-2 border rounded-lg">Messenger</a>
-          <a href="https://wa.me/+8801722591295" class="block px-4 py-2 border rounded-lg">WhatsApp</a>
-          <a href="https://t.me/saifistiak" class="block px-4 py-2 border rounded-lg">Telegram</a>
-          <a href="https://www.instagram.com/mdsaifistiak" class="block px-4 py-2 border rounded-lg">Instagram</a>
-          <a href="https://x.com/@mdsaifistiak" class="block px-4 py-2 border rounded-lg">X (Twitter)</a>
+          <a href="https://github.com/saifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">GitHub</a>
+          <a href="https://www.facebook.com/mdsaifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">Facebook</a>
+          <a href="https://m.me/mdsaifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">Messenger</a>
+          <a href="https://wa.me/+8801722591295" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">WhatsApp</a>
+          <a href="https://t.me/saifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">Telegram</a>
+          <a href="https://www.instagram.com/mdsaifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">Instagram</a>
+          <a href="https://x.com/@mdsaifistiak" class="block px-4 py-2 border border-white/10 rounded-lg bg-white/5">X (Twitter)</a>
         </div>
       </div>
     </section>
 
-    <footer class="text-center text-sm text-slate-500 py-8 border-t">
+    <footer class="text-center text-sm text-slate-400 py-8 border-t border-white/5">
       © 2026 Saif Istiak — All rights reserved.
     </footer>
   </body>
